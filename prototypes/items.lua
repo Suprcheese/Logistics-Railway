@@ -2,7 +2,7 @@ data:extend({
 {
 	type = "item",
 	name = "dummy-item",
-	icon = "__Logistics Railway__/graphics/control-panel.png",
+	icon = "__LogisticsRailway__/graphics/control-panel.png",
 	flags = {"hidden"},
 	subgroup = "transport",
 	order = "z",
@@ -11,7 +11,7 @@ data:extend({
 {
 	type = "item",
 	name = "storage-rail",
-	icon = "__Logistics Railway__/graphics/storage-rail.png",
+	icon = "__LogisticsRailway__/graphics/storage-rail.png",
 	flags = {"goes-to-quickbar"},
 	subgroup = "transport",
 	order = "a[train-system]-b[rail-storage]",
@@ -21,7 +21,7 @@ data:extend({
 {
 	type = "item",
 	name = "passive-provider-rail",
-	icon = "__Logistics Railway__/graphics/passive-provider-rail.png",
+	icon = "__LogisticsRailway__/graphics/passive-provider-rail.png",
 	flags = {"goes-to-quickbar"},
 	subgroup = "transport",
 	order = "a[train-system]-b[rail-passive-provider]",
@@ -31,7 +31,7 @@ data:extend({
 {
 	type = "item",
 	name = "active-provider-rail",
-	icon = "__Logistics Railway__/graphics/active-provider-rail.png",
+	icon = "__LogisticsRailway__/graphics/active-provider-rail.png",
 	flags = {"goes-to-quickbar"},
 	subgroup = "transport",
 	order = "a[train-system]-b[rail-active-provider]",
@@ -41,7 +41,7 @@ data:extend({
 {
 	type = "item",
 	name = "requester-rail",
-	icon = "__Logistics Railway__/graphics/requester-rail.png",
+	icon = "__LogisticsRailway__/graphics/requester-rail.png",
 	flags = {"goes-to-quickbar"},
 	subgroup = "transport",
 	order = "a[train-system]-b[rail-requester]",

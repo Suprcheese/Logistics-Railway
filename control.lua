@@ -1,5 +1,4 @@
 require "util"
-require "defines"
 require "stdlib/entity/inventory"
 
 local on_chest_created = nil
@@ -116,7 +115,7 @@ end)
 
 script.on_event(defines.events.on_train_changed_state, function(event)
 	local train = event.train
-	if train.state == defines.trainstate.wait_station and train.speed == 0 then -- Trains only interact with the logistics network when they are waiting at a station in automatic mode
+	if train.state == defines.train_state.wait_station and train.speed == 0 then -- Trains only interact with the logistics network when they are waiting at a station in automatic mode
 		placeChests(train)
 	else
 		syncChests(train)
@@ -156,10 +155,10 @@ function placeChests(train)
 	for i = 1, #train.cargo_wagons do
 		local wagon = train.cargo_wagons[i]
 		if wagon.type == "cargo-wagon" then
-			local requester = wagon.surface.find_entity("requester-rail", wagon.position)
-			local passive_provider = wagon.surface.find_entity("passive-provider-rail", wagon.position)
-			local active_provider = wagon.surface.find_entity("active-provider-rail", wagon.position)
-			local storage = wagon.surface.find_entity("storage-rail", wagon.position)
+			local requester = wagon.surface.find_entities_filtered({ name = "requester-rail", area = wagon.bounding_box })[1]
+			local passive_provider = wagon.surface.find_entities_filtered({ name = "passive-provider-rail", area = wagon.bounding_box })[1]
+			local active_provider = wagon.surface.find_entities_filtered({ name = "active-provider-rail", area = wagon.bounding_box })[1]
+			local storage = wagon.surface.find_entities_filtered({ name = "storage-rail", area = wagon.bounding_box })[1]
 			local created = false
 			if requester then
 				wagon.operable = false -- Don't want any changes to the wagon's inventory while it's been copied over to the proxy chest

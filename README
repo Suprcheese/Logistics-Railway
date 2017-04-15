@@ -1,7 +1,7 @@
 Logistics Railway 1.0.8
 =======================
 
-Version 1.0.8 was released May 16, 2016, was tested using Factorio v0.12.33, and was authored by Supercheese, with contributions from: TheAIBot, Choumiko, and operations.
+Version 1.0.9 was released Apr 15, 2017, was tested using Factorio v0.14.22, and was modified to work with this game version by me. Original author: Supercheese, with contributions from: TheAIBot, Choumiko, and operations.
 
 This mod allows you to load/unload your trains using your logistics robots! You don't need to change your trains at all -- simply replace some of your normal rail segments with one of the types of special Logistics Rails and any cargo wagon that stops on those rails will be automagically converted into a Logistics Wagon of the associated type.
 Then you can remove your inserters and chests and use only bots!
@@ -17,13 +17,15 @@ If this recipe seems to cheap to you, it can be changed in the configuration fil
 Known Issues/Quirks:
 --------------------
 
+Schedules don't work - train will have empty inventory on arrival on provider rails. I didn't test requester/storage rails.
+
 Any time a Cargo Wagon becomes a Logistics Wagon, its inventory is dumped into a separate invisible entity, and it is in fact that entity that interacts with the logistics network.
 When its inventory has been given to the other entity, the wagon's regular inventory is emptied and you are prevented from inserting/removing items by hand, unless you manually stop the train.
 
 Requester Rails have a dummy item (control panel icon) auto-inserted on creation. This allows them to have logistics requests set but not actually request any items until a wagon comes along.
 Please do not remove the control panel item. You needn't concern yourself with it, as it will be properly dealt with by the mod code.
 
-Sadly it seems that you cannot quick-replace regular rails with Logistics Rails, even after setting the appropriate property in the entity prototypes, but you can rotate the logistics rails by 90° and then place them over the existing rails, then re-place them in the proper orientation.
+Sadly it seems that you cannot quick-replace regular rails with Logistics Rails, even after setting the appropriate property in the entity prototypes, but you can rotate the logistics rails by 90ï¿½ and then place them over the existing rails, then re-place them in the proper orientation.
 
 Logistics rails can only be placed horizontally or vertically. You really wouldn't want to make a diagonal loading/unloading station anyway... would you?
 It is possible to get stuck in a diagonal building mode, however, if you grab some regular Straight Rails, rotate them diagonally, then immediately grab some Logistics Rails.
