@@ -25,11 +25,11 @@ When its inventory has been given to the other entity, the wagon's regular inven
 Requester Rails have a dummy item (control panel icon) auto-inserted on creation. This allows them to have logistics requests set but not actually request any items until a wagon comes along.
 Please do not remove the control panel item. You needn't concern yourself with it, as it will be properly dealt with by the mod code.
 
-Sadly it seems that you cannot quick-replace regular rails with Logistics Rails, even after setting the appropriate property in the entity prototypes, but you can rotate the logistics rails by 90� and then place them over the existing rails, then re-place them in the proper orientation.
+Sadly it seems that you cannot quick-replace regular rails with Logistics Rails, even after setting the appropriate property in the entity prototypes, but you can rotate the logistics rails by 90° and then place them over the existing rails, then re-place them in the proper orientation.
 
 Logistics rails can only be placed horizontally or vertically. You really wouldn't want to make a diagonal loading/unloading station anyway... would you?
 It is possible to get stuck in a diagonal building mode, however, if you grab some regular Straight Rails, rotate them diagonally, then immediately grab some Logistics Rails.
-If this happens to you, fret not, for if you try to place a Logistics Rail diagonally, the mod will automatically return you to orthoganal rail placement.
+If this happens to you, fret not, for if you try to place a Logistics Rail diagonally, the mod will automatically return you to orthogonal rail placement.
 You are also not allowed to place ghost-diagonals of Logistics Rails.
 
 While regular Straight Rails can overlap, Logistics Rails cannot.
