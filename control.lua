@@ -123,7 +123,7 @@ script.on_event(defines.events.on_train_changed_state, function(event)
 end)
 
 function placeLocoChest(locomotive)
-	local requester = locomotive.surface.find_entity("requester-rail", locomotive.position)
+	local requester = locomotive.surface.find_entities_filtered({ name = "requester-rail", area = locomotive.bounding_box })[1]
 	local created = false
 	if requester then
 		local chest = locomotive.surface.create_entity({name = "requester-chest-from-wagon", position = locomotive.position, force = locomotive.force})
@@ -131,7 +131,7 @@ function placeLocoChest(locomotive)
 		local locomotive_inventory = locomotive.get_inventory(defines.inventory.fuel)
 		Inventory.copy_inventory(locomotive_inventory, chest_inventory) -- Locomotive to chest
 		locomotive.clear_items_inside()
-		local dummy_requester = locomotive.surface.find_entity("requester-rail-dummy-chest", locomotive.position)
+		local dummy_requester = locomotive.surface.find_entities_filtered({ name = "requester-rail-dummy-chest", area = locomotive.bounding_box })[1]
 		for s = 1, 10 do			-- It seems all requester chests are limited to 10 request slots
 			local request = dummy_requester.get_request_slot(s)
 			if request then
@@ -190,7 +190,7 @@ function placeChests(train)
 				end
 				Inventory.copy_inventory(wagon_inventory, chest_inventory) -- Wagon to chest
 				wagon.clear_items_inside()
-				local dummy_requester = wagon.surface.find_entity("requester-rail-dummy-chest", wagon.position)
+				local dummy_requester = wagon.surface.find_entities_filtered({ name = "requester-rail-dummy-chest", area = wagon.bounding_box })[1]
 				for s = 1, 10 do			-- It seems all requester chests are limited to 10 request slots
 					local request = dummy_requester.get_request_slot(s)
 					if request then
@@ -207,8 +207,7 @@ function placeChests(train)
 					end
 				end
 				created = chest
-			end
-			if passive_provider then
+			elseif passive_provider then
 				wagon.operable = false -- Don't want any changes to the wagon's inventory while it's been copied over to the proxy chest
 				local chest = wagon.surface.create_entity({name = "passive-provider-chest-from-wagon", position = wagon.position, force = wagon.force})
 				local chest_inventory = chest.get_inventory(defines.inventory.chest)
@@ -217,8 +216,7 @@ function placeChests(train)
 				Inventory.copy_inventory(wagon_inventory, chest_inventory) -- Wagon to chest
 				wagon.clear_items_inside()
 				created = chest
-			end
-			if active_provider then
+			elseif active_provider then
 				wagon.operable = false -- Don't want any changes to the wagon's inventory while it's been copied over to the proxy chest
 				local chest = wagon.surface.create_entity({name = "active-provider-chest-from-wagon", position = wagon.position, force = wagon.force})
 				local chest_inventory = chest.get_inventory(defines.inventory.chest)
@@ -227,8 +225,7 @@ function placeChests(train)
 				Inventory.copy_inventory(wagon_inventory, chest_inventory) -- Wagon to chest
 				wagon.clear_items_inside()
 				created = chest
-			end
-			if storage then
+			elseif storage then
 				wagon.operable = false -- Don't want any changes to the wagon's inventory while it's been copied over to the proxy chest
 				local chest = wagon.surface.create_entity({name = "storage-chest-from-wagon", position = wagon.position, force = wagon.force})
 				local chest_inventory = chest.get_inventory(defines.inventory.chest)
