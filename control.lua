@@ -297,7 +297,8 @@ end
 
 function insertDummyItem(surface, chestName, chestPosition, chestForce)
 	local dummy = surface.create_entity({name = chestName, position = chestPosition, force = chestForce})
-	dummy.insert{name="dummy-item", count=1}
+	dummy.get_inventory(defines.inventory.chest).setbar(0)
+	--dummy.insert{name="dummy-item", count=1}
 end
 
 function removeDummy(surface, dummyName, position)
