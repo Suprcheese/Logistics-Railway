@@ -16,7 +16,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__Logistics Railway__/graphics/null.png",
+      filename = "__LogisticsRailway__/graphics/null.png",
       priority = "low",
       width = 1,
       height = 1,
@@ -41,7 +41,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__Logistics Railway__/graphics/null.png",
+      filename = "__LogisticsRailway__/graphics/null.png",
       priority = "low",
       width = 1,
       height = 1,
@@ -66,7 +66,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__Logistics Railway__/graphics/null.png",
+      filename = "__LogisticsRailway__/graphics/null.png",
       priority = "low",
       width = 1,
       height = 1,
@@ -91,7 +91,7 @@ data:extend({
     close_sound = { filename = "__base__/sound/metallic-chest-close.ogg", volume = 0.7 },
     picture =
     {
-      filename = "__Logistics Railway__/graphics/null.png",
+      filename = "__LogisticsRailway__/graphics/null.png",
       priority = "low",
       width = 1,
       height = 1,
@@ -104,7 +104,7 @@ data:extend({
     name = "requester-rail-dummy-chest",
     icon = "__base__/graphics/icons/logistic-chest-requester.png",
     flags = {"placeable-neutral", "placeable-off-grid"},
-	minable = {hardness = 0.2, mining_time = 0.5, result = "straight-rail"},
+	minable = {hardness = 0.2, mining_time = 0.5, result = "rail"},
     max_health = 0,
     corpse = "small-remnants",
     collision_box = {{-0.99999, -0.99999}, {0.99999, 0.99999}},
@@ -115,7 +115,7 @@ data:extend({
     logistic_mode = "requester",
     picture =
     {
-      filename = "__Logistics Railway__/graphics/null.png",
+      filename = "__LogisticsRailway__/graphics/null.png",
       priority = "low",
       width = 1,
       height = 1,
