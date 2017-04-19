@@ -1,7 +1,28 @@
-local storage_rail = util.table.deepcopy(data.raw["straight-rail"]["straight-rail"])
-local passive_provider_rail = util.table.deepcopy(data.raw["straight-rail"]["straight-rail"])
-local active_provider_rail = util.table.deepcopy(data.raw["straight-rail"]["straight-rail"])
-local requester_rail = util.table.deepcopy(data.raw["straight-rail"]["straight-rail"])
+local rail_proto = {
+    type = "straight-rail",
+    name = "straight-rail",
+    icon = "__base__/graphics/icons/rail.png",
+    flags = {"placeable-neutral", "player-creation", "building-direction-8-way"},
+    minable = {mining_time = 0.5, result = "rail"},
+    max_health = 100,
+    corpse = "straight-rail-remnants",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 100
+      }
+    },
+    collision_box = {{-0.7, -0.8}, {0.7, 0.8}},
+    selection_box = {{-0.7, -0.8}, {0.7, 0.8}},
+    rail_category = "regular",
+    pictures = railpictures(),
+  }
+
+local storage_rail = util.table.deepcopy(rail_proto)
+local passive_provider_rail = util.table.deepcopy(rail_proto)
+local active_provider_rail = util.table.deepcopy(rail_proto)
+local requester_rail = util.table.deepcopy(rail_proto)
 
 storage_rail.name = "storage-rail"
 passive_provider_rail.name = "passive-provider-rail"
@@ -41,8 +62,8 @@ requester_rail.pictures.straight_rail_horizontal.metals.tint = { r = 0.0, g = 0.
 data:extend({storage_rail, passive_provider_rail, active_provider_rail, requester_rail})
 
 if expensiveRails then
-	data.raw["straight-rail"]["storage-rail"].minable.result = "storage-rail"
-	data.raw["straight-rail"]["passive-provider-rail"].minable.result = "passive-provider-rail"
-	data.raw["straight-rail"]["active-provider-rail"].minable.result = "active-provider-rail"
-	data.raw["straight-rail"]["requester-rail"].minable.result = "requester-rail"
+	data.raw["rail"]["storage-rail"].minable.result = "storage-rail"
+	data.raw["rail"]["passive-provider-rail"].minable.result = "passive-provider-rail"
+	data.raw["rail"]["active-provider-rail"].minable.result = "active-provider-rail"
+	data.raw["rail"]["requester-rail"].minable.result = "requester-rail"
 end
