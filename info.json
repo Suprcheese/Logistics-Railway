@@ -4,6 +4,7 @@
   "title": "Logistics Railway",
   "author": "Supercheese",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=93&t=21462",
-  "dependencies": ["base >= 0.12.17"],
+  "factorio_version": "0.16",
+  "dependencies": ["base"],
   "description": "Turn your regular, boring old trains into Logistics Trains! Now your bots can load and unload directly into your cargo wagons -- no inserters needed!"
 }

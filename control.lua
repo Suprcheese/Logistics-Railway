@@ -1,5 +1,4 @@
 require "util"
-require "defines"
 require "stdlib/entity/inventory"
 
 local on_chest_created = nil
@@ -83,7 +82,7 @@ script.on_event(defines.events.on_robot_built_entity, function(event)
 	end
 end)
 
-script.on_event(defines.events.on_preplayer_mined_item, function(event)
+script.on_event(defines.events.on_pre_player_mined_item, function(event)
 	local entity = event.entity
 	if (entity.type == "cargo-wagon" or entity.type == "locomotive") and entity.train and entity.train.valid then
 		syncChests(entity.train)
@@ -116,7 +115,7 @@ end)
 
 script.on_event(defines.events.on_train_changed_state, function(event)
 	local train = event.train
-	if train.state == defines.trainstate.wait_station and train.speed == 0 then -- Trains only interact with the logistics network when they are waiting at a station in automatic mode
+	if train.state == defines.train_state.wait_station and train.speed == 0 then -- Trains only interact with the logistics network when they are waiting at a station in automatic mode
 		placeChests(train)
 	else
 		syncChests(train)
@@ -275,7 +274,7 @@ function syncChests(train)
 			prepareDeparture(wagon, "passive-provider-chest-from-wagon")
 			prepareDeparture(wagon, "active-provider-chest-from-wagon")
 			prepareDeparture(wagon, "storage-chest-from-wagon")
-			game.raise_event(on_chest_destroyed, {wagon_index=i, train=train})
+			script.raise_event(on_chest_destroyed, {wagon_index=i, train=train})
 		end
 	end
 end

@@ -5,7 +5,7 @@ data:extend({
     enabled = "false",
     ingredients =
     {
-      {"straight-rail", 1},
+      {"rail", 1},
     },
     result = "storage-rail"
 },
@@ -15,7 +15,7 @@ data:extend({
     enabled = "false",
     ingredients =
     {
-      {"straight-rail", 1},
+      {"rail", 1},
     },
     result = "passive-provider-rail"
 },
@@ -25,7 +25,7 @@ data:extend({
     enabled = "false",
     ingredients =
     {
-      {"straight-rail", 1},
+      {"rail", 1},
     },
     result = "active-provider-rail"
 },
@@ -35,7 +35,7 @@ data:extend({
     enabled = "false",
     ingredients =
     {
-      {"straight-rail", 1},
+      {"rail", 1},
     },
     result = "requester-rail"
 },
