@@ -3,7 +3,7 @@ data:extend({
     type = "technology",
     name = "logistics-wagons",
     icon = "__Logistics Railway__/graphics/logistics-trains.png",
-	icon_size = 128,
+    icon_size = 128,
     effects =
     {
       {

@@ -20,3 +20,32 @@ Fixed an issue which was causing vanilla straight rails to be unable to cross ea
 Fixed an issue where you could get stuck in a diagonal building mode and be allowed to place diagonal logistics rails -- this is now prevented from happening and you are snapped back to orthogonal if you try to place a diagonal Logistics Rail.
 Fixed an issue where Logistics Rails could overlap -- overlapping can cause issues, and thus is disallowed.
 Changed the blue ball icon for requester rails into a control panel icon.
+
+
+Version 1.0.4 - March 18, 2016
+------------------------------
+Increase collision_box sizes of rails and of the invisible dummy requester chest in order to minimize the chance of a wagon failing to detect a Logistics Rail beneath it.
+
+
+Version 1.0.5 - March 27, 2016
+------------------------------
+Now compatible with Smart Trains (v0.3.77 or greater), thanks to Choumiko!
+
+
+Version 1.0.6 - April 3, 2016
+-----------------------------
+Added functionality to hangle cargo filters interacting with requester chests, courtesy of operations (https://forums.factorio.com/viewtopic.php?p=143658#p143658)
+Added config.lua with an option to make Logistics Rails more expensive by adding 1 Advanced Circuit to their recipes. If enabled, Logistics Rails also no longer give you back a regular rail when picked up, but instead gives you the appropriate type of rail.
+
+
+Version 1.0.7 - April 27, 2016
+------------------------------
+The mod is now using the Factorio Standard Library (https://github.com/Afforess/Factorio-Stdlib/wiki).
+Clean up dummy logistics chests when a wagon is destroyed by damage.
+Move tooltip to the proper entity that should be clicked to set Requester Rail requests.
+
+
+Version 1.0.8 - May 16, 2016
+----------------------------
+You can now mine (i.e. pick up) wagons while they are interacting with Logistics Rails.
+Locomotives can now be automatically fueled up using Requester Rails. Please be careful to only request valid fuel items into locomotives, as all non-fuel items that cannot be inserted into locomotives will be destroyed. Also note that locomotives cannot use the other three types of rail.

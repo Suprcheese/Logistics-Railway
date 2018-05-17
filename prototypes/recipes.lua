@@ -5,7 +5,7 @@ data:extend({
     enabled = "false",
     ingredients =
     {
-      {"straight-rail", 1},
+      {"rail", 1},
     },
     result = "storage-rail"
 },
@@ -15,7 +15,7 @@ data:extend({
     enabled = "false",
     ingredients =
     {
-      {"straight-rail", 1},
+      {"rail", 1},
     },
     result = "passive-provider-rail"
 },
@@ -25,7 +25,7 @@ data:extend({
     enabled = "false",
     ingredients =
     {
-      {"straight-rail", 1},
+      {"rail", 1},
     },
     result = "active-provider-rail"
 },
@@ -35,8 +35,15 @@ data:extend({
     enabled = "false",
     ingredients =
     {
-      {"straight-rail", 1},
+      {"rail", 1},
     },
     result = "requester-rail"
 },
 })
+
+if expensiveRails then
+	data.raw["recipe"]["storage-rail"].ingredients[2] = {"advanced-circuit", 1}
+	data.raw["recipe"]["passive-provider-rail"].ingredients[2] = {"advanced-circuit", 1}
+	data.raw["recipe"]["active-provider-rail"].ingredients[2] = {"advanced-circuit", 1}
+	data.raw["recipe"]["requester-rail"].ingredients[2] = {"advanced-circuit", 1}
+end
