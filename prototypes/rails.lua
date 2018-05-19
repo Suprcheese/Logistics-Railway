@@ -8,6 +8,7 @@ passive_provider_rail.name = "passive-provider-rail"
 active_provider_rail.name = "active-provider-rail"
 requester_rail.name = "requester-rail"
 
+data.raw["straight-rail"]["straight-rail"].fast_replaceable_group = "rails"
 storage_rail.fast_replaceable_group = "rails"
 passive_provider_rail.fast_replaceable_group = "rails"
 active_provider_rail.fast_replaceable_group = "rails"
