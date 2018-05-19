@@ -195,7 +195,6 @@ end
 
 function placeLogiRailChest(wagon, chestName)
 	wagon.operable = false -- Don't want any changes to the wagon's inventory while it's copied over to the proxy chest
-	wagon.minable = false
 	local chest = wagon.surface.create_entity({name = chestName, position = wagon.position, force = wagon.force})
 	local chest_inventory = chest.get_inventory(defines.inventory.chest)
 	local wagon_inventory = wagon.get_inventory(defines.inventory.chest)
@@ -267,7 +266,6 @@ function prepareDeparture(wagon, chestName)
 		Inventory.copy_inventory(chest_inventory, wagon_inventory) -- Chest to wagon
 		chest.destroy()
 		wagon.operable = true
-		wagon.minable = true
 		removeChestToWagonLink(wagon)
 	end
 end
