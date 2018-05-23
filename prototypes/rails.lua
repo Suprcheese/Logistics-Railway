@@ -8,6 +8,7 @@ passive_provider_rail.name = "passive-provider-rail"
 active_provider_rail.name = "active-provider-rail"
 requester_rail.name = "requester-rail"
 
+data.raw["straight-rail"]["straight-rail"].fast_replaceable_group = "rails"
 storage_rail.fast_replaceable_group = "rails"
 passive_provider_rail.fast_replaceable_group = "rails"
 active_provider_rail.fast_replaceable_group = "rails"
@@ -26,16 +27,16 @@ requester_rail.collision_box = {{-0.7, -0.99999}, {0.7, 0.99999}}
 -- requester_rail.selection_box = {{-0.1, -0.1}, {0.1, 0.1}} -- This doesn't seem to actually work
 
 storage_rail.pictures.straight_rail_vertical.metals.tint = { r = 1.0, g = 1.0, b = 0.0, a = 0.5 }
-storage_rail.pictures.straight_rail_diagonal.metals.tint = { r = 1.0, g = 1.0, b = 0.0, a = 0.5 }
+-- storage_rail.pictures.straight_rail_diagonal.metals.tint = { r = 1.0, g = 1.0, b = 0.0, a = 0.5 }
 storage_rail.pictures.straight_rail_horizontal.metals.tint = { r = 1.0, g = 1.0, b = 0.0, a = 0.5 }
 passive_provider_rail.pictures.straight_rail_vertical.metals.tint = { r = 1.0, g = 0.0, b = 0.0, a = 0.5 }
-passive_provider_rail.pictures.straight_rail_diagonal.metals.tint = { r = 1.0, g = 0.0, b = 0.0, a = 0.5 }
+-- passive_provider_rail.pictures.straight_rail_diagonal.metals.tint = { r = 1.0, g = 0.0, b = 0.0, a = 0.5 }
 passive_provider_rail.pictures.straight_rail_horizontal.metals.tint = { r = 1.0, g = 0.0, b = 0.0, a = 0.5 }
 active_provider_rail.pictures.straight_rail_vertical.metals.tint = { r = 1.0, g = 0.0, b = 1.0, a = 0.5 }
-active_provider_rail.pictures.straight_rail_diagonal.metals.tint = { r = 1.0, g = 0.0, b = 1.0, a = 0.5 }
+-- active_provider_rail.pictures.straight_rail_diagonal.metals.tint = { r = 1.0, g = 0.0, b = 1.0, a = 0.5 }
 active_provider_rail.pictures.straight_rail_horizontal.metals.tint = { r = 1.0, g = 0.0, b = 1.0, a = 0.5 }
 requester_rail.pictures.straight_rail_vertical.metals.tint = { r = 0.0, g = 0.0, b = 1.0, a = 0.5 }
-requester_rail.pictures.straight_rail_diagonal.metals.tint = { r = 0.0, g = 0.0, b = 1.0, a = 0.5 }
+-- requester_rail.pictures.straight_rail_diagonal.metals.tint = { r = 0.0, g = 0.0, b = 1.0, a = 0.5 }
 requester_rail.pictures.straight_rail_horizontal.metals.tint = { r = 0.0, g = 0.0, b = 1.0, a = 0.5 }
 
 data:extend({storage_rail, passive_provider_rail, active_provider_rail, requester_rail})

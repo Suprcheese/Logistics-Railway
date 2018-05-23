@@ -6,7 +6,8 @@ data:extend({
 	flags = {"hidden"},
 	subgroup = "transport",
 	order = "z",
-	stack_size = 1
+	stack_size = 1,
+	icon_size = 32
 },
 {
 	type = "item",
@@ -16,7 +17,8 @@ data:extend({
 	subgroup = "transport",
 	order = "a[train-system]-b[rail-storage]",
 	place_result = "storage-rail",
-	stack_size = 100
+	stack_size = 100,
+	icon_size = 32
 },
 {
 	type = "item",
@@ -26,7 +28,8 @@ data:extend({
 	subgroup = "transport",
 	order = "a[train-system]-b[rail-passive-provider]",
 	place_result = "passive-provider-rail",
-	stack_size = 100
+	stack_size = 100,
+	icon_size = 32
 },
 {
 	type = "item",
@@ -36,7 +39,8 @@ data:extend({
 	subgroup = "transport",
 	order = "a[train-system]-b[rail-active-provider]",
 	place_result = "active-provider-rail",
-	stack_size = 100
+	stack_size = 100,
+	icon_size = 32
 },
 {
 	type = "item",
@@ -46,6 +50,7 @@ data:extend({
 	subgroup = "transport",
 	order = "a[train-system]-b[rail-requester]",
 	place_result = "requester-rail",
-	stack_size = 100
+	stack_size = 100,
+	icon_size = 32
 },
 })
